@@ -294,7 +294,7 @@
             <li style="float:right"><a href="about.html">About</a></li>
             <li style="float:right"><a href="info.html">Information</a></li>
             <li style="float:right"><a href="timeline.html">Timeline</a></li>
-            <li style="float:right"><a class="active" href="smart.html">Goals</a></li>
+            <li style="float:right"><a class="active" href="/smart">Goals</a></li>
         </ul>
     </div>
 
@@ -350,7 +350,7 @@
                 <h2>Create a SMART Goal:</h2>
             </div>
             <div class="modal-body">
-                <form method="post" action="/lists/new">
+                <form method="post" action="/smart">
                     <br>
 
                     <label for="new_goal">S: Enter your SPECIFIC goal:</label>
@@ -407,8 +407,11 @@
                 <h2>Modal Header</h2>
             </div>
             <div class="modal-body">
-                <p>SomeDFKJDFHLDFLDFy</p>
-                <p>Some other text...</p>
+                <ul>
+                    {% for current in current %}
+                    <li>{{ current.goal }}</li>
+                    {% endfor %}
+                </ul>
             </div>
             <div class="modal-footer">
                 <h3> DLFKJLSDFJLDSHFFooter</h3>

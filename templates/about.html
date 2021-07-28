@@ -1,17 +1,15 @@
 <html>
     <head>
-        <title>About Us</title>
-        <link rel="stylesheet" href="../static/css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
-    </head> 
+        <title>Music Favorites</title>
+    </head>
     <body>
-        <h1>Hello world!</h1>
-        <p>We can build a full webpage here</p>
-        <form>
-            <input type="text" name="nickname" placeholder="Enter your nickname"/>
-            <input type="submit" value="Submit"/>
-        </form>
+      <h1>Goals</h1>
+      <div class="music-list">
+        <ul>
+          {% for current in collection %}
+            <li>{{ collection.goal }}</li>
+          {% endfor %}
+        </ul>
+      </div>
     </body>
 </html>
