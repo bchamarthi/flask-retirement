@@ -7,6 +7,14 @@ body {
   box-sizing: border-box;
   background-image: url(https://media.istockphoto.com/vectors/space-starry-sky-background-vector-id833533150?k=6&m=833533150&s=170667a&w=0&h=9E9YsOgbTKRzEHMCm435WnHavC60apDwhbtMei4eDtk=);
 }
+#title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px; 
+    padding: 5px;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: white;
+}
 
 #small {
     width: 300px;

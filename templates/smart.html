@@ -3,10 +3,13 @@
 <head>
     <title>Smart</title>
     <link rel="stylesheet" href="../static/css/smart.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbitron:wght@600&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/7.5.1/math.min.js"></script>
     <script src="../static/my.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
@@ -31,8 +34,6 @@
     <br>
     <br>
     <br>
-
-
 
     <!---------- ACTION CARDS  ---------->
 
@@ -195,7 +196,7 @@
             <div class="modal-body">
                 <form action='/save' method='POST'>
                     <textarea class="scrollabletextbox" name="note">
-                        
+
                         {{note}}
 
                 </textarea>
