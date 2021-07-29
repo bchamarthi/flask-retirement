@@ -28,13 +28,17 @@ def index():
 def info():
     return render_template('info.html')
 
-@app.route('/about.html')
+@app.route('/about')
 def about():
     return render_template('about.html')
 
 @app.route('/profile.html')
 def profile():
     return render_template('profile.html')
+
+@app.route('/game')
+def game():
+    return render_template('game.html')
 
 
 @app.route('/save', methods=['GET', 'POST'])

@@ -3,7 +3,7 @@
 TEXT: font-family: 'Space Mono', monospace; */
 
 #title {
-font-family: 'Zen Tokyo Zoo', cursive;
+font-family: 'Orbitron', sans-serif;
 font-size: 25px; 
 padding: 5px;
 padding-top: 10px;
@@ -44,11 +44,6 @@ background-color: #bababa;
 color: rgb(255, 255, 255);
 }
 
-
-
-body {
-    background-color: #bababa;
-}
 :root {
     --d: 700ms;
     --e: cubic-bezier(0.19, 1, 0.22, 1);
@@ -228,7 +223,7 @@ body {
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #faf1c2;
+    background-color: #000000;
     border-radius: 15px;
     margin: auto;
     padding: 0;
@@ -283,12 +278,12 @@ body {
 .modal-body {
     padding: 2px 16px;
     border-radius: 15px;
-    background-color: #faf1c2;
+    background-color: #000000;
     font-family: 'EB Garamond', serif;
 }
 .modal-footer {
     padding: 2px 16px;
-    background-color: #d7b740;
+    background-color: #64635d;
     color: white;
     border-radius: 15px;
     font-family: 'Encode Sans SC', sans-serif;
@@ -306,10 +301,10 @@ body {
     border: none;
 }
 .modal-button:hover {
-    background-color: #ab7f24;
+    background-color: #6d6a63;
 }
 .modal-button:focus {
-    outline: 1px dashed #f0d64e;
+    outline: 1px dashed #ffffff;
     outline-offset: 3px;
 }
 .form-text-box {
@@ -319,7 +314,7 @@ body {
     overflow:scroll;
 }
 #current {
-    background-color: #faf1c2;
+    background-color: #57554c;
 }
 #current2 {
     display: flex; 
