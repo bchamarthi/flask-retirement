@@ -1,0 +1,335 @@
+/* ALL THE FONTS:  */
+/* TITLE: font-family: 'Zen Tokyo Zoo', cursive; 
+TEXT: font-family: 'Space Mono', monospace; */
+
+#title {
+font-family: 'Zen Tokyo Zoo', cursive;
+font-size: 25px; 
+padding: 5px;
+padding-top: 10px;
+padding-left: 20px;
+color: white;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #2d779c;
+border-radius: 15px;
+}
+
+li {
+float: left;
+}
+
+li a {
+display: block;
+color: rgb(255, 255, 255);
+font-family: 'Space Mono', monospace; 
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border-radius: 15px;
+}
+
+li a:hover:not(.active) {
+background-color: #54d3c3;
+border-radius: 15px;
+}
+
+.active {
+background-color: #bababa;
+color: rgb(255, 255, 255);
+}
+
+
+
+body {
+    background-color: #bababa;
+}
+:root {
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+    --font-family: 'EB Garamond', serif;
+    --font-family: 'Encode Sans SC', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+}
+
+.page-content {
+    place-items: center;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem;
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+@media (min-width: 600px) {
+    .page-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 800px) {
+    .page-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    background-color: whitesmoke;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+    .card {
+        height: 350px;
+    }
+}
+.card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: 0 0;
+    transition: transform calc(var(--d) * 1.5) var(--e);
+    pointer-events: none;
+}
+.card:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.320) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.540) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.790) 100%);
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:nth-child(1):before {
+    background-image: url(https://media.nationalgeographic.org/assets/photos/185/610/8ba3500a-d879-4bf9-a84c-350baacfc4cd.jpg);
+}
+.card:nth-child(2):before {
+    background-image: url(https://m.media-amazon.com/images/I/518LjNaooLL._AC_SY741_.jpg);
+}
+.card:nth-child(3):before {
+    background-image: url(https://www.thisiscolossal.com/wp-content/uploads/2020/08/cupola-with-clouds-and-ocean.jpg);
+}
+.card:nth-child(4):before {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/cc/STS-125_FD9_Release.jpg);
+}
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+}
+.content>*+* {
+    margin-top: 1rem;
+}
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.copy {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.35;
+}
+@media (hover: hover) and (min-width: 600px) {
+    .card:after {
+        transform: translateY(0);
+    }
+    .content {
+        transform: translateY(calc(100% - 4.5rem));
+    }
+    .content>*:not(.title) {
+        opacity: 0;
+        transform: translateY(1rem);
+        transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+    }
+    .card:hover,
+    .card:focus-within {
+        align-items: center;
+    }
+    .card:hover:before,
+    .card:focus-within:before {
+        transform: translateY(-4%);
+    }
+    .card:hover:after,
+    .card:focus-within:after {
+        transform: translateY(-50%);
+    }
+    .card:hover .content,
+    .card:focus-within .content {
+        transform: translateY(0);
+    }
+    .card:hover .content>*:not(.title),
+    .card:focus-within .content>*:not(.title) {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(var(--d) / 8);
+    }
+    .card:focus-within:before,
+    .card:focus-within:after,
+    .card:focus-within .content,
+    .card:focus-within .content>*:not(.title) {
+        transition-duration: 0s;
+    }
+}
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    border-radius: 15px;
+}
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #faf1c2;
+    border-radius: 15px;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #925818;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5a6b34;
+    color: white;
+    border-radius: 14px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+.modal-body {
+    padding: 2px 16px;
+    border-radius: 15px;
+    background-color: #faf1c2;
+    font-family: 'EB Garamond', serif;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #d7b740;
+    color: white;
+    border-radius: 15px;
+    font-family: 'Encode Sans SC', sans-serif;
+}
+.modal-button {
+    cursor: pointer;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: #925818;
+    border: none;
+}
+.modal-button:hover {
+    background-color: #ab7f24;
+}
+.modal-button:focus {
+    outline: 1px dashed #f0d64e;
+    outline-offset: 3px;
+}
+.form-text-box {
+    padding-left: 8px;
+    width: 700px;
+    height: 50px;
+    overflow:scroll;
+}
+#current {
+    background-color: #faf1c2;
+}
+#current2 {
+    display: flex; 
+    align-content: column; 
+}
+
+.scrollabletextbox {
+    height:100%;
+    width:100%;
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 82%;
+    overflow:scroll;
+}

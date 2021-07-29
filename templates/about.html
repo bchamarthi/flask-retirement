@@ -1,15 +1,58 @@
 <html>
-    <head>
-        <title>Music Favorites</title>
-    </head>
-    <body>
-      <h1>Goals</h1>
-      <div class="music-list">
+
+<head>
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/about.css">
+    <script src="../static/about.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="nav-bar">
         <ul>
-          {% for current in collection %}
-            <li>{{ collection.goal }}</li>
-          {% endfor %}
+            <li id="title"><i>F I N E X P L O R E</i></a></li>
+            <li style="float:right"><a href="/about">About</a></li>
+            <li style="float:right"><a href="info.html">Information</a></li>
+            <li style="float:right"><a href="timeline.html">Timeline</a></li>
+            <li style="float:right"><a href="/smart">Goals</a></li>
+            <li style="float:right"><a href="/logout">Log Out</a></li>
+            <li style="float:right"><a href="/log">Log In</a></li>
+            <li style="float:right"><a href="/signlog">Sign In</a></li>
+            <li style="float:right"><a class="active" href="index.html">Home</a></li>
         </ul>
-      </div>
-    </body>
+    </div>
+
+    <h1>About Us</h1>
+    
+
+    <h3>Meet the creators of Finexplor<br>&nbsp; &nbsp;&nbsp;go back to
+        Earth</h3>
+
+    <div class="space">
+        <div class="astronaut" style="z-index:25">
+            <div class="head"> </div>
+            <div class="suit">
+                <div class="hand">
+                </div>
+                <div class="things"> </div>
+                <div class="thing2"> </div>
+            </div>
+        </div>
+    </div>
+
+    <img class="moon" src="https://i.postimg.cc/nzX8ZVhN/moon-3.png" />
+    <img class="earth" style="top:  20%; left:20%" src="https://i.postimg.cc/hvSM1p7g/worldwide-2.png" />
+
+    <div class="meteors">
+        <div class="m1"></div>
+        <div class="m2"></div>
+        <div class="m3"></div>
+        <div class="m4"></div>
+    </div>
+
+
+</body>
+
 </html>
