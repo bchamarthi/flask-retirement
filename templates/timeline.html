@@ -21,12 +21,15 @@
 
     <div class="nav-bar">
         <ul>
-            <li style="float:left"><a href="index.html"><i> ← </i></a></li>
-            <li style="float:right"><a href="about.html">About</a></li>
+            <li id="title"><i>F I N E X P L O R E</i></a></li>
+            <li style="float:right"><a href="/about">About</a></li>
             <li style="float:right"><a href="info.html">Information</a></li>
-            <li style="float:right"><a class="active" href="timeline.html">Timeline</a></li>
-            <li style="float:right"><a href="smart.html">Goals</a></li>
-            
+            <li style="float:right"><a href="timeline.html">Timeline</a></li>
+            <li style="float:right"><a href="/smart">Goals</a></li>
+            <li style="float:right"><a href="/logout">Log Out</a></li>
+            <li style="float:right"><a href="/log">Log In</a></li>
+            <li style="float:right"><a href="/signlog">Sign In</a></li>
+            <li style="float:right"><a class="active" href="index.html">Home</a></li>
         </ul>
     </div>
 
@@ -184,8 +187,30 @@
                 <h2>Modal Header</h2>
             </div>
             <div class="modal-body">
-                <p>SomeDFKJDFHLDFLDFy</p>
-                <p>Some other text...</p>
+                <p>Definition (what is this decision, who would make this decision)</p> 
+                <p>Must-Knows (things you should know before deciding whether to set this as a goal)</p>
+                <p>What it requires (action plans)</p>
+
+                <br>
+
+                <form action="/calculator" method="POST">
+                Input the starting principle amount:
+                <input type="text" name="p"><br>
+                Enter the number of compounding periods per year:
+                <input type="text" name="n"><br>
+                Enter your annual interest rate in integer value. Ex: 15 for 15%:
+                <input type="text" name="r"><br>
+                Provide the amount of years:
+                <input type="text" name="y"><br>
+                <button type="submit" value="submit">Calculate</button>
+                </form>
+                
+                <br>
+                
+                {%if z%}
+                <p>Your cost is {{z}}</p>
+                {%endif%}
+
             </div>
             <div class="modal-footer">
                 <h3> DLFKJLSDFJLDSHFFooter</h3>
@@ -201,11 +226,45 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">×</span>
-                <h2>Modal Header</h2>
+                <h2>Retirement</h2>
             </div>
             <div class="modal-body">
-                <p>SomeDFKJDFHLDFLDFy</p>
-                <p>Some other text...</p>
+                <p>Definition (what is this decision, who would make this decision)</p> 
+                <p>Must-Knows (things you should know before deciding whether to set this as a goal)</p>
+                <p>What it requires (action plans)</p>
+
+                <h1>CALCULATOR</h1>
+                <form method="post" action="/retirement">
+                    <br>
+
+                    <label for="pmt">Enter a number representing the investment amount at the end of every year: </label>
+                    <input type="text" class="form-text-box" name="pmt" value="">
+
+                    <br><br>
+
+                    <label for="i">Enter the rate of interest in integer value. (Ex: 15 is 15%): </label>
+                    <input type="text" class="form-text-box" name="i" value="">
+
+                    <br><br>
+
+                    <label for="fv">Enter the least amount to be able to afford retirement:  </label>
+                    <input type="text" class="form-text-box" name="fv" value="">
+
+                    <br><br>
+
+                    <label for="beg_age">Enter your current age: </label>
+                    <input type="text" class="form-text-box" name="beg_age" value="">
+
+                    <br><br>
+
+                    <input type="submit" value="Submit" />
+                </form>                
+
+                {%if retir_age%}
+                <p>You can retire at: {{retir_age}} years old</p>
+                {%endif%}
+
+
             </div>
             <div class="modal-footer">
                 <h3> DLFKJLSDFJLDSHFFooter</h3>

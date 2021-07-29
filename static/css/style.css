@@ -16,8 +16,12 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #2d779c;
+    background-color: #9eb7bb;
     border-radius: 15px;
+    border-style: groove;
+    border-color: black;
+    border-width: 5px;
+    
     }
 
 li {

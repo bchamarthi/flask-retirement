@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css?family=Gugi&display=swap");
+ * {
+	 font-family: "Gugi", cursive;
+}
+ .space {
+	 animation: sky 20s ease infinite;
+	 background: linear-gradient(-45deg, #05070c, #25012a, #b8cce0, #206282);
+	 background-size: 400% 400%;
+	 bottom: 0;
+	 color: #fff;
+	 left: 0;
+	 position: absolute;
+	 right: 0;
+	 top: 0;
+}
+ .astronaut {
+	 overflow: hidden;
+	 width: 300px;
+	 height: 300px;
+	 border-radius: 150px 150px 0px 0px;
+	 position: absolute;
+	 left: 10px;
+	 top: 249px;
+	 z-index: -13;
+}
+ .head {
+	 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.9);
+	 overflow: hidden;
+	 position: absolute;
+	 z-index: 3;
+	 background: #eaeef1;
+	 left: calc(50% - 50px);
+	 top: 100px;
+	 border-radius: 90px /85px;
+	 height: 95px;
+	 width: 102px;
+}
+ .head:after {
+	 content: "";
+	 position: absolute;
+	 border: 12px solid #2a2f34;
+	 border-radius: 50%;
+	 height: 47px;
+	 width: 100%;
+	 left: -12px;
+	 top: 3px;
+	 background-image: linear-gradient(to right, #2a2f34 0%, #2a2f34 100%);
+}
+ .head:before {
+	 content: "";
+	 position: absolute;
+	 width: 5px;
+	 height: 30px;
+	 background: white;
+	 opacity: 0.3;
+	 border-radius: 50%;
+	 top: 15px;
+	 left: 12px;
+	 z-index: 2;
+	 transform: rotate(25deg);
+}
+ .suit {
+	 height: 50%;
+	 width: 145px;
+	 background: #eaeef1;
+	 position: absolute;
+	 left: calc(50% - 70px);
+	 top: 63%;
+	 z-index: 1;
+	 border-radius: 15px 15px 0px 0px;
+	 box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+}
+ .suit:after {
+	 content: "";
+	 position: absolute;
+	 border: 0px 0px 0px 0px;
+	 border-radius: 15px 0px 0px 30px;
+	 height: 35px;
+	 width: 125px;
+	 right: 80px;
+	 top: 43px;
+	 background: #eaeef1;
+	 transform: rotate(90deg);
+	 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+ .suit:before {
+	 content: "";
+	 position: absolute;
+	 border: 0px 0px 0px 0px;
+	 border-radius: 30px 30px 30px 15px;
+	 height: 35px;
+	 width: 75px;
+	 left: 120px;
+	 top: 1px;
+	 background: #eaeef1;
+}
+ .hand {
+	 content: "";
+	 position: absolute;
+	 border: 0px 0px 0px 0px;
+	 border-radius: 30px 30px 30px 15px;
+	 height: 90px;
+	 width: 32px;
+	 left: 170px;
+	 top: -60px;
+	 background: #eaeef1;
+	 animation: wave 20s infinite;
+}
+ .things {
+	 position: absolute;
+	 border-radius: 0px 30px 30px 0px;
+	 height: 60px;
+	 width: 25px;
+	 left: calc(50% - 14.5px);
+	 top: -18px;
+	 background: #182736;
+	 transform: rotate(90deg);
+	 box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+	 z-index: 3;
+}
+ .things:after {
+	 content: "";
+	 position: absolute;
+	 height: 125px;
+	 width: 55px;
+	 left: 50px;
+	 top: -45px;
+	 background: #182736;
+}
+ .thing2 {
+	 height: 50%;
+	 width: 4px;
+	 background: #182736;
+	 position: absolute;
+	 left: calc(50% - 50px);
+	 z-index: 1;
+	 box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+}
+ .thing2:after {
+	 content: "";
+	 position: absolute;
+	 height: 67%;
+	 width: 4px;
+	 left: 97px;
+	 background: #182736;
+}
+ .moon {
+	 position: absolute;
+	 top: 15%;
+	 left: 20%;
+}
+ .earth {
+	 position: absolute;
+	 margin-top: -10%;
+	 margin-left: 73%;
+	 max-width: 40px;
+}
+ h1 {
+	 position: absolute;
+	 top: 5.5%;
+	 left: 38%;
+	 z-index: 3;
+	 text-transform: uppercase;
+	 color: #253545;
+	 letter-spacing: 4px;
+	 font-size: 9em;
+	 font-weight: bold;
+}
+ .h {
+	 position: absolute;
+	 top: 5.5%;
+	 left: 37.5%;
+	 z-index: 3;
+	 text-transform: uppercase;
+	 color: #253545;
+	 letter-spacing: 4px;
+	 font-size: 9em;
+	 font-weight: bold;
+	 opacity: 0.3;
+}
+ h3 {
+	 position: absolute;
+	 top: 65%;
+	 left: 60%;
+	 z-index: 3;
+	 text-transform: uppercase;
+	 color: #253545;
+	 letter-spacing: 4px;
+	 font-size: 1em;
+	 font-weight: bold;
+}
+ .meteors {
+	 height: 100%;
+	 position: absolute;
+	 width: 100%;
+	 z-index: 20;
+}
+ .m1, .m2, .m3, .m4 {
+	 background: radial-gradient(ellipse farthest-corner at 35px -10px, #fff 15%, rgba(0, 0, 0, 0) 60%);
+	 border-radius: 20%;
+	 height: 10px;
+	 position: absolute;
+	 transform: rotate(210deg) scale(0.5);
+	 width: 200px;
+}
+ .m1 {
+	 left: 90%;
+	 top: 20%;
+}
+ .m2 {
+	 left: 40%;
+	 top: 65%;
+}
+ .m3 {
+	 left: 60%;
+	 top: 15%;
+}
+ .m4 {
+	 animation-delay: 2s;
+	 animation-duration: 5s;
+	 animation-iteration-count: infinite;
+	 animation-name: moves;
+	 left: 80%;
+	 top: 230%;
+}
+ @-webkit-keyframes moves {
+	 0% {
+		 left: 0;
+		 top: 0;
+	}
+	 100% {
+		 left: 100%;
+		 top: 70%;
+	}
+}
+ @-webkit-keyframes twinkle {
+	 0% {
+		 -webkit-filter: brightness(100%);
+	}
+	 100% {
+		 -webkit-filter: brightness(150%);
+	}
+}
+ @keyframes sky {
+	 0% {
+		 background-position: 0 50%;
+	}
+	 50% {
+		 background-position: 100% 50%;
+	}
+	 100% {
+		 background-position: 0 50%;
+	}
+}
+ @keyframes wave {
+	 0% {
+		 transform: rotate(-25deg);
+	}
+	 10% {
+		 transform: rotate(-5deg);
+	}
+	 20% {
+		 transform: rotate(12deg);
+	}
+	 30% {
+		 transform: rotate(20deg);
+	}
+	 40% {
+		 transform: rotate(9deg);
+	}
+	 50% {
+		 transform: rotate(0deg);
+	}
+	 100% {
+		 transform: rotate(0deg);
+	}
+}
+
+/* ALL THE FONTS:  */
+/* TITLE: font-family: 'Zen Tokyo Zoo', cursive; 
+ TEXT: font-family: 'Space Mono', monospace; */
+
+#title {
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 25px; 
+    padding: 5px;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2d779c;
+    border-radius: 15px;
+    }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-family: 'Space Mono', monospace; 
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+li a:hover:not(.active) {
+    background-color: #54d3c3;
+    border-radius: 15px;
+}
+
+.active {
+    background-color: #bababa;
+    color: rgb(255, 255, 255);
+}
+
+
+
