@@ -362,7 +362,7 @@ color: rgb(255, 255, 255);
     font-family: 'Space Mono', monospace;
 }
 #current {
-    background-color: #57554c;
+    background-color: #dddddd;
 }
 #current2 {
     display: flex; 

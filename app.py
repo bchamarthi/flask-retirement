@@ -7,7 +7,6 @@ from flask_pymongo import PyMongo
 from flask import redirect
 from flask import session, url_for
 import pymongo
-
 # -- Initialization section --
 app = Flask(__name__)
 app.secret_key = '_5#y2L"F4Q8z\n\xec]/'
@@ -17,31 +16,22 @@ app.config['MONGO_DBNAME'] = 'goals'
 app.config['MONGO_URI'] = 'mongodb+srv://admin:85Uyd3llgvemqMeo@cluster0.mkhj9.mongodb.net/goals?retryWrites=true&w=majority'
 mongo = PyMongo(app)
 # -- Routes section --
-
-
 @app.route('/')
 @app.route('/index.html')
 def index():
     return render_template('index.html')
-
 @app.route('/info.html')
 def info():
     return render_template('info.html')
-
 @app.route('/about')
 def about():
     return render_template('about.html')
-
 @app.route('/profile.html')
 def profile():
-    user = session['username']
-    return render_template('profile.html', user = user)
-
+    return render_template('profile.html')
 @app.route('/game')
 def game():
     return render_template('game.html')
-
-
 @app.route('/save', methods=['GET', 'POST'])
 def save():
     collection = mongo.db.login
@@ -50,14 +40,10 @@ def save():
     query = {'name': session['username']}
     if request.method == 'POST':
         note = request.form['note']
-        newNote = { "$set": { "scratchpad": note } }
+        newNote = {"$set": {"scratchpad": note}}
         collection.update_one(query, newNote)
         return render_template('smart.html', note=scratchpad)
     return render_template('smart.html', note=scratchpad)
-
-
-
-
 @app.route('/smart', methods=['GET', 'POST'])
 def smarty():
     collection = mongo.db.login
@@ -71,48 +57,41 @@ def smarty():
         new_realistic = request.form['new_realistic']
         new_time = request.form['new_time']
         new_additional = request.form['new_additional']
-        finalMessage = ("I want to " + new_goal + ". I will be measuring this goal by: " + new_measure + ". This goal is " + new_achieveable + " achieveable and is " + new_realistic + " realistic. I aim to complete this goal by: " + new_time + ". Additional Info: " + new_additional)
+        finalMessage = ("I want to " + new_goal + ". I will be measuring this goal by: " + new_measure + ". This goal is " + new_achieveable +
+                        " achieveable and is " + new_realistic + " realistic. I aim to complete this goal by: " + new_time + ". Additional Info: " + new_additional)
         current_goal.append(finalMessage)
-        newvalues = { "$set": { "current-goals": current_goal  } }
+        newvalues = {"$set": {"current-goals": current_goal}}
         collection.update_one(query, newvalues)
         return render_template('smart.html', current=current_goal)
     return render_template('smart.html', current=current_goal)
-
 @app.route('/complete', methods=['GET', 'POST'])
-def complete(): 
+def complete():
     collection = mongo.db.login
     connect_user = list(collection.find({'name': session['username']}))
     current_goal = connect_user[0]['current-goals']
-    complete_goal = connect_user[0]['completed-goals']
+    complete_goal = list(connect_user[0]['completed-goals'])
+    print(complete_goal)
     query = {'name': session['username']}
-    if request.method == 'GET': 
+    if request.method == 'GET':
         return render_template('smart.html', complete=complete_goal)
     if request.method == 'POST':
-        new_goal = request.form['new_goal']
-        new_measure = request.form['new_measure']
-        new_achieveable = request.form['new_achieveable']
-        new_realistic = request.form['new_realistic']
-        new_time = request.form['new_time']
-        new_additional = request.form['new_additional']
-        checked_goals = list(request.form) 
-        for checked in checked_goals: 
-            for goal in current_goal: 
-                if goal == checked: 
-                    complete_goal.append("I want to " + new_goal + ". I will be measuring this goal by: " + new_measure + ". This goal is " + new_achieveable + " achieveable and is " + new_realistic + " realistic. I aim to complete this goal by: " + new_time + ". Additional Info: " + new_additional)
-                    newComplete = { "$set": { "completed-goals": complete_goal } }
+        checked_goals = list(request.form.getlist("checked!"))
+        print(request.form)
+        print(checked_goals)
+        for checked in checked_goals:
+            for goal in current_goal:
+                if goal == checked:
+                    complete_goal.append(goal)
+                    newComplete = {"$set": {"completed-goals": complete_goal}}
                     collection.update_one(query, newComplete)
                     current_goal.remove(goal)
-                    newDelete = { "$set": { "current-goals": current_goal } }
+                    newDelete = {"$set": {"current-goals": current_goal}}
                     collection.update_one(query, newDelete)
                     return render_template('smart.html', complete=complete_goal)
     return render_template('smart.html', complete=complete_goal)
-                    
-                    
-                    
+
     #                 return redirect(url_for('smarty'), complete=complete_goal)
     # return redirect(url_for('smarty'), complete=complete_goal)
-    
-
 @app.route('/signlog', methods=['GET', 'POST'])
 def signlog():
     # are they posting with form
@@ -134,14 +113,14 @@ def signlog():
 # login to account
 @app.route('/log', methods=['GET', "POST"])
 def login():
-    if request.method == 'GET': 
+    if request.method == 'GET':
         return render_template('/log.html')
-    if request.method == 'POST': 
+    if request.method == 'POST':
         # connect to database
         login = mongo.db.login
         # get login for users
         login_user = login.find_one({'name': request.form['username']})
-            # check password matches
+        # check password matches
         if login_user:
             # check does the password they put in match password in database
             if request.form['password'] == login_user['password']:
@@ -155,17 +134,14 @@ def login():
 def logout():
     session.clear()
     return redirect('/')
-
 @app.route('/timeline.html')
 def timeline():
     return render_template('timeline.html')
-
-
 @app.route('/retirement', methods=['POST', 'GET'])
-def retirement(): 
-    if request.method == 'GET': 
+def retirement():
+    if request.method == 'GET':
         return render_template('timeline.html')
-    if request.method == 'POST': 
+    if request.method == 'POST':
         pmt = int(request.form['pmt'])
         i = int(request.form['i'])
         fv = int(request.form['fv'])
@@ -177,20 +153,14 @@ def retirement():
             a += pmt * (1. + i/100.)**n
         retir_age = beg_age + n
         return render_template('timeline.html', retir_age=retir_age)
-    
-
-@app.route("/calculator", methods=['POST','GET'])
+@app.route("/calculator", methods=['POST', 'GET'])
 def calculator():
-  z= ''
-  if request.method=='POST' and 'p' in request.form and 'n' in request.form and 'r' in request.form and 'y' in request.form:
-    p = float(request.form.get('p'))
-    n = float(request.form.get('n'))
-    r = float(request.form.get('r'))
-    y = float(request.form.get('y'))
-    fv = p * (((1 + ((r/100.0)/n)) ** (n*y)))
-    z = round(fv,2)  
-  return render_template('timeline.html', z=z)
-
-
-
-
+    z = ''
+    if request.method == 'POST' and 'p' in request.form and 'n' in request.form and 'r' in request.form and 'y' in request.form:
+        p = float(request.form.get('p'))
+        n = float(request.form.get('n'))
+        r = float(request.form.get('r'))
+        y = float(request.form.get('y'))
+        fv = p * (((1 + ((r/100.0)/n)) ** (n*y)))
+        z = round(fv, 2)
+    return render_template('timeline.html', z=z)

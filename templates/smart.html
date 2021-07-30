@@ -144,10 +144,11 @@
                 <form method="post" action='/complete'>
                     <ul id="current">
                         {% for item in current %}
-                        <li id="current2"><label><input type="checkbox" value="ON" class="test"
-                                    name={{item}} />{{item}}</label></li>
+                        <li id="current2"><label><input type="checkbox" value="{{item}}" class="test"
+                                name="checked!" />{{item}}</label></li>
                         {% endfor %}
                     </ul>
+                    <br>
                     <div class="modal-footer">
                         <input type="submit" class="yellowing" value="Save Changes" />
                     </div>
@@ -174,9 +175,9 @@
                 <li id="current2">{{goal}}</li>
                 {% endfor %}
 
-            </div>
             <div class="modal-footer">
                 <h3> Congrats!</h3>
+            </div>
             </div>
         </div>
     </div>
