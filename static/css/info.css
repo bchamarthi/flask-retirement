@@ -166,14 +166,14 @@ section {
 }
 .swiper-slide:nth-child(1) .slide-img {
   background-image: url("https://cdn.custom-cursor.com/packs/3263/among-us-red-dead-body-and-report-pack.png");
-  height: 250px;
-  width: 400px;
+  height: 200px;
+  width: 150px;
 
 }
 .swiper-slide:nth-child(2) .slide-img {
   background-image: url("https://cdn.shopify.com/s/files/1/0078/4528/1905/products/Asset13AMONG.png?v=1602380483");
-  height: 250px;
-  width: 400px;
+  height: 150px;
+  width: 300px;
 }
 .swiper-slide:nth-child(3) .slide-img {
   background-image: url("https://i.redd.it/qvorpkw1cxy51.png");
