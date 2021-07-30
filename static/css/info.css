@@ -1,10 +1,10 @@
 body {
   margin: 0;
-  padding: 0;
   overflow-x: hidden;
-  font-family: "Roboto";
   list-style: none;
   box-sizing: border-box;
+  padding-left: 10%;
+  padding-right: 10%;
   background-image: url(https://media.istockphoto.com/vectors/space-starry-sky-background-vector-id833533150?k=6&m=833533150&s=170667a&w=0&h=9E9YsOgbTKRzEHMCm435WnHavC60apDwhbtMei4eDtk=);
 }
 #title {
@@ -13,15 +13,13 @@ body {
     padding: 5px;
     padding-top: 10px;
     padding-left: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
-
 #small {
     width: 300px;
     height:300px;
     opacity: 0.00001;
 }
-
 /* 
 nav {
   position: fixed;
@@ -33,75 +31,65 @@ nav {
   align-items: center;
   padding: 10px 30px;
 }
-
 .logo {
   color: #fff;
   font-weight: 600;
   font-size: 16px;
 }
-
 nav .nav-links ul {
   display: flex;
   flex-direction: row;
 }
-
 nav .nav-links ul li {
   padding: 0 4px;
   list-style: none;
 }
-
 nav .nav-links ul li img {
   transform: scale(0.45);
 } */
-
 section {
   height: 100vh;
   overflow: hidden;
 }
-
 .bg img {
   width: 110vw;
   height: 110vh;
   filter: brightness(0.6);
 }
-
 .rock1 {
   position: absolute !important;
   left: 10vw !important;
   top: 20vh !important;
 }
-
 .rock1 img {
   width: 40%;
   filter: brightness(0.5);
 }
-
 .text h1 {
-  font-family: "AlphaCentauri" !important;
+  /* font-family: "AlphaCentauri" !important; */
+  font-family: 'Orbitron', sans-serif !important;
   font-size: 5vw;
-  color: #fff;
+  color: rgb(255, 255, 255);
   letter-spacing: 20px;
   position: absolute;
-  top: 35vh;
-  left: 34vw;
+  left: 40vw;
+  top: 25vh;
 }
-
 .earth img {
   width: 400px;
   height: 400px;
   position: absolute;
-  left: 34vw;
-  top: 25vh;
+  left: 25vw;
+  top: 15vh;
   z-index: 1;
   filter: brightness(0.7);
+  
 }
-
 .mid {
   left: -150px !important;
   bottom: -100px !important;
   top: unset !important;
 }
-
 .mid img {
   width: 100%;
   z-index: 2;
@@ -109,29 +97,24 @@ section {
   top: 20vh !important;
   filter: brightness(0.8);
 }
-
 .fore {
   right: -50px !important;
   bottom: -200px !important;
   top: 0px !important;
   left: unset !important;
 }
-
 .fore img {
   width: 400px;
   height: 110vh;
   z-index: 3;
   filter: brightness(0.5);
 }
-
 /* SWIPER */
-
 #sectiontwo {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-
 .rockbg1 {
   position: absolute;
   transform: scale(0.2);
@@ -140,7 +123,6 @@ section {
   left: 0;
   z-index: 1;
 }
-
 .planet-links {
   width: 95%;
   height: 5vh;
@@ -151,7 +133,6 @@ section {
   justify-content: space-evenly;
   list-style: none;
 }
-
 .planet-links .swiper-pagination-bullet {
   opacity: 0.2;
   outline: none;
@@ -160,55 +141,66 @@ section {
   color: #fff;
   opacity: 1;
 }
-
 .swiper-pagination-clickable .swiper-pagination-bullet {
   background: transparent;
 }
-
 .swiper-container {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   padding: 50px 0;
 }
-
 .swiper-wrapper {
   transition-delay: 0.5s;
 }
-
 .swiper-slide {
-  height: 400px !important;
-  width: 90% !important;
-  background: transparent;
+  height: 60% !important;
+  width: 80% !important;
+  background: white;
+  border-style: groove; 
+  border-color: rgb(255, 255, 255); 
+  border-width: 4px;
+  border-radius: 15px;
+  color: black;
+  opacity: 0.9;
 }
-
 .swiper-slide:nth-child(1) .slide-img {
-  background-image: url("https://i.ibb.co/gg3R6qV/mercury.png");
+  background-image: url("https://cdn.custom-cursor.com/packs/3263/among-us-red-dead-body-and-report-pack.png");
+  height: 250px;
+  width: 400px;
+
 }
 .swiper-slide:nth-child(2) .slide-img {
-  background-image: url("https://i.ibb.co/svrnWhy/venus.png");
+  background-image: url("https://cdn.shopify.com/s/files/1/0078/4528/1905/products/Asset13AMONG.png?v=1602380483");
+  height: 250px;
+  width: 400px;
 }
 .swiper-slide:nth-child(3) .slide-img {
-  background-image: url("https://i.ibb.co/jf1TJdv/earth1.png");
+  background-image: url("https://i.redd.it/qvorpkw1cxy51.png");
+  height: 250px;
+  width: 400px;
 }
 .swiper-slide:nth-child(4) .slide-img {
-  background-image: url("https://i.ibb.co/94bp6zT/mars.png");
+  background-image: url("https://img.icons8.com/bubbles/500/among-us.png");
+  height: 250px;
+  width: 400px;
 }
 .swiper-slide:nth-child(5) .slide-img {
-  background-image: url("https://i.ibb.co/vw1nyGt/jupiter.png");
+  background-image: url("https://media1.giphy.com/media/gm0ODkRBpwXCjoauiw/giphy.gif?cid=6c09b95210r49yuwtbe82ltfb3fagyt6thbms9gmsvfgunlf&rid=giphy.gif");
+  height: 250px;
+  width: 400px;
 }
 .swiper-slide:nth-child(6) .slide-img {
-  background-image: url("https://i.ibb.co/LxW2x3F/saturn.png");
+  background-image: url("https://wonder-day.com/wp-content/uploads/2020/10/wonder-day-among-us-13.png");
+  height: 250px;
+  width: 400px;
 }
 .swiper-slide:nth-child(7) .slide-img {
-  background-image: url("https://i.ibb.co/1qHSFGh/uranus.png");
+  background-image: url("http://imagenesparapeques.com/wp-content/uploads/2021/01/Fantasma-Among-Us-2-768x966.png");
+  height: 250px;
+  width: 400px;
 }
-.swiper-slide:nth-child(8) .slide-img {
-  background-image: url("https://i.ibb.co/86HX1R4/neptune.png");
-}
-.swiper-slide:nth-child(9) .slide-img {
-  background-image: url("https://i.ibb.co/FndRPnk/image-removebg-preview.png");
-}
+
 .slide-img {
   background-position: "center";
   background-repeat: no-repeat !important;
@@ -216,50 +208,50 @@ section {
   width: 30%;
   height: 100%;
 }
-
 .slide-number {
   position: absolute;
   top: -30px;
   left: 30%;
-  width: 200px;
+  width: 30%;
   height: 120px;
-  overflow: hidden;
+  overflow: visible;
   z-index: 10;
+  padding-bottom: 1em;
+  font-family: 'Orbitron', sans-serif;
 }
-
 .slide-number p {
-  font-size: 40px;
-  font-family: "AlphaCentauri" !important;
-  color: #fff;
+  font-size: 33px;
+  font-family: 'Orbitron', sans-serif !important;
+  color: rgb(0, 0, 0);
   position: relative;
 }
-
 .slide-number p span {
   position: absolute;
 }
-
 .slide-detail {
   position: absolute;
   top: 130px;
   left: 30%;
   z-index: 10;
-  width: 50%;
+  width: 25%;
   height: 400px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: black;
 }
-
 .slide-detail p {
-  font-size: 14px;
-  color: #fff;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
   position: relative;
   opacity: 0.8;
   line-height: 30px;
+  font-family: 'Do Hyeon', sans-serif;
 }
-
 .slide-detail p span {
   position: absolute;
+  font-family: 'Orbitron', sans-serif;
 }
-
 .slide-detail-facts {
   position: absolute;
   top: 240px;
@@ -268,7 +260,8 @@ section {
   width: 50%;
   height: 400px;
   overflow: hidden;
-  color: #fff;
+  color: rgb(0, 0, 0);
+  font-family: 'Space Mono', monospace; 
 }
 .slide-detail-facts div {
   display: flex;
@@ -277,7 +270,6 @@ section {
 .slide-detail-facts div h5 {
   margin-right: 20px;
 }
-
 .slide-text {
   position: absolute;
   top: -150px;
@@ -288,9 +280,8 @@ section {
   overflow: hidden;
   opacity: 0.1 !important;
 }
-
 .slide-text h4 {
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-size: 100px;
   position: relative;
 }
@@ -299,46 +290,55 @@ section {
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-radius: 15px;
-    background-color: #2d779c;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    margin-top: 3000px;
-    z-index: 9;
-    margin: 30px;
-    }
-li {
-    float: left;
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: white;
+border-radius: 15px;
+border-style: groove; 
+border-color:rgb(204, 204, 204);
+border-width: 5px;
 }
+
+li {
+float: left;
+}
+
 li a {
     display: block;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: 'Space Mono', monospace; 
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     border-radius: 15px;
+
 }
+
+.text {
+    padding: 14px 16px;
+}
+
+#pfp { 
+    padding: 2px 2px;
+    height: 45px; 
+    width: 45px;
+}
+
 li a:hover:not(.active) {
-    background-color: #54d3c3;
-    border-radius: 15px;
+background-color: #54d3c3;
+border-radius: 15px;
 }
+
 .active {
-    background-color: #bababa;
+    background-color: #BABABA;
     color: rgb(255, 255, 255);
 }
 .list-group {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #ff8a8a;
+    background-color: #FF8A8A;
     }
 .vert-li {
     display: block;

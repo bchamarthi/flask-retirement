@@ -8,7 +8,7 @@
     padding: 5px;
     padding-top: 10px;
     padding-left: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 ul {
@@ -16,10 +16,10 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #9eb7bb;
+    background-color: #ffffff;
     border-radius: 15px;
     border-style: groove;
-    border-color: black;
+    border-color: rgb(207, 207, 207);
     border-width: 5px;
     
     }
@@ -30,7 +30,7 @@ li {
 
 li a {
     display: block;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: 'Space Mono', monospace; 
     text-align: center;
     padding: 14px 16px;

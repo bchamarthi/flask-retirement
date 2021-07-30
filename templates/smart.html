@@ -4,7 +4,9 @@
     <title>Smart</title>
     <link rel="stylesheet" href="../static/css/smart.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbitron:wght@600&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=EB+Garamond&family=Encode+Sans+SC:wght@200&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,14 +22,13 @@
     <div class="nav-bar">
         <ul>
             <li id="title"><i>F I N E X P L O R E</i></a></li>
-            <li style="float:right"><a href="/about">About</a></li>
-            <li style="float:right"><a href="info.html">Information</a></li>
-            <li style="float:right"><a href="timeline.html">Timeline</a></li>
-            <li style="float:right"><a href="/smart">Goals</a></li>
-            <li style="float:right"><a href="/logout">Log Out</a></li>
-            <li style="float:right"><a href="/log">Log In</a></li>
-            <li style="float:right"><a href="/signlog">Sign In</a></li>
-            <li style="float:right"><a class="active" href="index.html">Home</a></li>
+            <li class="text" style="float:right"><a href="/logout">Log Out</a></li>
+            <li class="text" style="float:right"><a href="/about">About</a></li>
+            <li class="text" style="float:right"><a class="active" href="/smart">Goals</a></li>
+            <li class="text" style="float:right"><a href="info.html">Information</a></li>
+            <li class="text" style="float:right"><a href="timeline.html">Timeline</a></li>
+            <li style="float:right"><a href="/profile.html"><img id="pfp"
+                        src="https://www.citypng.com/public/uploads/preview/-41603559613basfxwtq5w.png"></a></li>
         </ul>
     </div>
 
@@ -49,15 +50,14 @@
         <div class="card">
             <div class="content">
                 <h2 class="title">Create Goal</h2>
-                <p class="copy">Big or small, goal setting is the first step towards financial security.</p>
+                <p class="copy">Turning dreams into realities!</p>
                 <button class="modal-button" href="#myModal1">create</button>
             </div>
         </div>
         <div class="card">
             <div class="content">
                 <h2 class="title">Current Goals</h2>
-                <p class="copy">The past is history. The future is a mystery. Today is a gift, that's why it's called
-                    the present.</p>
+                <p class="copy">Keep your head up!</p>
                 <button class="modal-button" href="#myModal2">view</button>
             </div>
         </div>
@@ -78,13 +78,13 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">×</span>
-                <h2>Create a SMART Goal:</h2>
+                <h2>Create SMART Goal</h2>
             </div>
             <div class="modal-body">
                 <form method="post" action="/smart">
                     <br>
 
-                    <label for="new_goal">S: Enter your SPECIFIC goal:</label>
+                    <label for="new_goal">S: Enter the SPECIFICS of what you want to achieve:</label>
                     <input type="text" class="form-text-box" name="new_goal" value="">
 
                     <br><br>
@@ -95,18 +95,18 @@
                     <br><br>
 
                     <label for="new_achieveable">A: Is your goal ACHIEVEABLE?</label> <br>
-                    <input type="radio" id="yes" name="new_achieveable" value="yes">
-                    <label for="yes">undoubtedly yes</label><br>
-                    <input type="radio" id="no" name="new_achieveable" value="no">
-                    <label for="no">i'm unsure at this point</label><br>
+                    <input type="radio" id="yes" name="new_achieveable" value="undoubtedly">
+                    <label for="yes">undoubtedly </label><br>
+                    <input type="radio" id="no" name="new_achieveable" value="maybe">
+                    <label for="no">maybe</label><br>
 
                     <br><br>
 
                     <label for="new_realistic">R: Is your goal REALISTIC?</label> <br>
-                    <input type="radio" id="yes" name="new_realistic" value="yes">
-                    <label for="yes">undoubtedly yes</label><br>
-                    <input type="radio" id="no" name="new_realistic" value="no">
-                    <label for="no">i'm unsure at this point</label><br>
+                    <input type="radio" id="yes" name="new_realistic" value="undoubtedly">
+                    <label for="yes">undoubtedly </label><br>
+                    <input type="radio" id="no" name="new_realistic" value="maybe">
+                    <label for="no">maybe</label><br>
 
                     <br><br>
 
@@ -115,15 +115,15 @@
 
                     <br><br>
 
-                    <label for="new_time">Add additional notes:</label>
-                    <input type="text" class="form-text-box" name="new_time" value="">
+                    <label for="new_additional">Additional Notes:</label>
+                    <input type="text" class="form-text-box" name="new_additional" value="">
 
                     <br><br>
-                    <input type="submit" value="Submit" />
+                    <input type="submit" class="yellowing" value="Submit" />
                 </form>
             </div>
             <div class="modal-footer">
-                <h3>Modal Footer</h3>
+                <h3></h3>
             </div>
         </div>
     </div>
@@ -137,7 +137,7 @@
                 <span class="close">×</span>
                 <h2>Current Goals</h2>
                 <form action='/smart' method='GET'>
-                    <input type="submit" value="Refresh " />
+                    <input type="submit" class="yellowing" value="Refresh " />
                 </form>
             </div>
             <div class="modal-body">
@@ -149,7 +149,7 @@
                         {% endfor %}
                     </ul>
                     <div class="modal-footer">
-                        <input type="submit" value="Save Changes" />
+                        <input type="submit" class="yellowing" value="Save Changes" />
                     </div>
                 </form>
             </div>
@@ -165,7 +165,7 @@
                 <span class="close">×</span>
                 <h2>Completed Goals</h2>
                 <form action='/complete' method='GET'>
-                    <input type="submit" value="Refresh " />
+                    <input class="yellowing" type="submit" value="Refresh " />
                 </form>
             </div>
             <div class="modal-body">
@@ -188,9 +188,9 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close">×</span>
-                <h2>Scratchpad- Welcome! Stay here & collect your thoughts :0</h2>
+                <h2>Scratchpad</h2>
                 <form action='/save' method='GET'>
-                    <input type="submit" value="Refresh " />
+                    <input class="yellowing" type="submit" value="Refresh " />
                 </form>
             </div>
             <div class="modal-body">
@@ -203,7 +203,7 @@
             </div>
             <div class="modal-footer">
 
-                <input type="submit" value="Save Changes " />
+                <input class="yellowing" type="submit" value="Save Changes " />
                 </form>
             </div>
         </div>

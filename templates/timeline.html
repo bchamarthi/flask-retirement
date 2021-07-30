@@ -4,13 +4,14 @@
     <title>Timeline</title>
     <link rel="stylesheet" href="../static/css/timeline.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbitron:wght@600&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
-    
+
     <script src="../static/timeline.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
 
@@ -21,276 +22,440 @@
     <div class="nav-bar">
         <ul>
             <li id="title"><i>F I N E X P L O R E</i></a></li>
-            <li style="float:right"><a href="/about">About</a></li>
-            <li style="float:right"><a href="info.html">Information</a></li>
-            <li style="float:right"><a href="timeline.html">Timeline</a></li>
-            <li style="float:right"><a href="/smart">Goals</a></li>
-            <li style="float:right"><a href="/logout">Log Out</a></li>
-            <li style="float:right"><a class="active" href="profile.html">Profile</a></li>
+            <li class="text" style="float:right"><a href="/logout">Log Out</a></li>
+            <li class="text" style="float:right"><a href="/about">About</a></li>
+            <li class="text" style="float:right"><a href="/smart">Goals</a></li>
+            <li class="text" style="float:right"><a href="/info.html">Information</a></li>
+            <li class="text" style="float:right"><a class="active" href="/timeline.html">Timeline</a></li>
+            <li style="float:right"><a href="/profile.html"><img id="pfp"
+                        src="https://www.citypng.com/public/uploads/preview/-41603559613basfxwtq5w.png"></a></li>
         </ul>
     </div>
 
     <br>
 
-<div>
-<button class="modal-button" id="goal1" href="#myModal1">1</button>
-<button class="modal-button" id="goal2" href="#myModal2">2</button>
-<button class="modal-button" id="goal3" href="#myModal3">3</button>
-<button class="modal-button" id="goal4" href="#myModal4">4</button>
-<button class="modal-button" id="goal5" href="#myModal5">5</button>
-<button class="modal-button" id="goal6" href="#myModal6">6</button>
-<button class="modal-button" id="goal7" href="#myModal7">7</button>
-<button class="modal-button" id="goal8" href="#myModal8">8</button>
-<button class="modal-button" id="goal9" href="#myModal9">9</button>
-</div>
-
- <!-- THE MODALS  -->
-
- <!-- MODAL 1 -->
-    <!-- Trigger/Open The Modal -->
-    <!-- The Modal -->
-    <div id="myModal1" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">×</span>
-                <h2>Getting Started: Credit Cards & Bank Accounts</h2>
-            </div>
-            <div class="modal-body">
-                <p>
-                    When deciding which credit card to apply for, there are many factors that come into play. There are three general types of credit cards: Cards that help you improve your credit when it's limited or damaged, cards that save you money on interest, and cards that earn rewards. If your motive is to build or rebuild credit, student or secured credit cards are the best ones. Student credit cards generally start with a low credit or allowance thus making it low risk and secured credit cards require a security deposit of $200 or more which holds you accountable to pay your credit card bill. Your deposit is returned to you when the account is upgraded or closed in good standing. If you want to earn rewards then a rewards, travel, or cash back credit card might be a good fit. These cards typically have higher APRs (credit card interest rate), but they offer larger sign-up bonuses and give you points in miles or cash back on every dollar you spend. Overall it is important to apply for the card that offers you the highest overall value. Also, before opening a credit card, it is important to open a checking account and a savings account. A checking account gives you a financial launchpad where you can receive payments, like your paycheck, via direct deposit route. You also can send payments to pay your monthly expenses like rent, utilities, gas directly from your account or use your debit card when you’re out and about or shopping online. On the other hand, a savings account is used for long term financial goals to build their emergency fund or to save for a larger goal like a major purchase such as a house down payment or buying a car.
-                </p>
-            </div>
-            <div class="modal-footer imposter-slogan">
-                <img class="imposter" src= "https://cdn.dribbble.com/users/1003944/screenshots/14561765/among_us_run_dribbble_4x.gif?compress=1&resize=400x300">
-                <br>
-                <h2>Getting started is a smooth process when yo have the right help! Welcome to the best source of help in this galaxy!</h2>
-            </div>
-        </div>
+    <div>
+        <button class="modal-button" id="goal1" href="#myModal1">1</button>
+        <button class="modal-button" id="goal2" href="#myModal2">2</button>
+        <button class="modal-button" id="goal3" href="#myModal3">3</button>
+        <button class="modal-button" id="goal4" href="#myModal4">4</button>
+        <button class="modal-button" id="goal5" href="#myModal5">5</button>
+        <button class="modal-button" id="goal6" href="#myModal6">6</button>
+        <button class="modal-button" id="goal7" href="#myModal7">7</button>
+        <button class="modal-button" id="goal8" href="#myModal8">8</button>
+        <button class="modal-button" id="goal9" href="#myModal9">9</button>
     </div>
 
-<!-- MODAL 2 -->
-    <!-- Trigger/Open The Modal -->
-    <!-- The Modal -->
-    <div id="myModal2" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">×</span>
-                <h2>First Job + Responsibilities</h2>
-            </div>
-            <div class="modal-body">
-                <p>You got your first job!! While it is a very exciting time, it is important to make the most of your income and plan for the future. It is important to create a flexible budget to plan out your retirement savings, monthly budget, savings, and wants. A good rule of thumb to follow is 50-20-30, where 50 percent of your income goes to needs, 20 percent are for savings and debt payments and 30 percent are for wants like entertainment, shopping, travel, etc. If your employer offers a 401k plan, enroll in it as soon as you are eligible, it will help you in the long run. Also if your employer offers a health insurance plan it is important to take part in it. At the end of your first week you notice that your paycheck has a chunk of money gone. Your employer has taken out the taxes you owe. Employers withhold money for federal income taxes, social security taxes, and state and local income taxes in some states and localities.</p>
-            </div>
-            <div class="modal-footer imposter-slogan">
-                <img class="imposter" src= "https://i.pinimg.com/originals/7f/53/8a/7f538a8eae483c3ded6a5e1fc89a40b1.png">
-                <br>
-                <h2>Getting your first job is always exciting... don't forget to pay your taxes though!</h2>
+    <!-- THE MODALS  -->
+    <div class="bigmodalmove">
+        <!-- MODAL 1 -->
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal1" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Getting Started: Credit Cards & Bank Accounts</h2>
+                </div>
+                <div class="modal-body">
+
+                    <h2>Overview: </h2>
+                    <div class="body-over">
+                        <p class="list-over">
+                            As a young teenager, applying for a credit card is an integral yet an arduous step. There
+                            are many clauses and rules to be aware of before embarking on your financial adventure!
+                        </p>
+                    </div>
+                    <h2>Requirements: </h2>
+                    <div class="body-req">
+                        <p class="list-req">
+                            Checking & savings accounts: allow you to pay monthly expenses through direct deposit and
+                            save for long term goals like buying a house.
+                        </p>
+                    </div>
+                    <h2>Action Steps: </h2>
+                    <div class="body-act">
+                        <p class="list-act">
+                        <p>3 general types of credit cards: (1) cards to improve your credit score when it's limited or
+                            damaged, (2) cards to save you money on interest, and (3) cards that earn rewards.
+                        </p> <br>
+                        <p>Want to build or rebuild credit? Student (secured) credit cards are the BEST! You’ll start
+                            with a low credit (or allowance), making it low risk. Secured credit cards require a
+                            security deposit of $200 or more which holds you accountable to pay your credit card bill.
+                        </p> <br>
+                        <p>Want rewards? Rewards, travel, or cash back credit cards are perfect! These typically have
+                            higher APRs (credit card interest rates)... but a lot of daily benefits!
+                        </p>
+
+                        </p>
+                    </div>
+                    <br><br>
+
+                </div>
+                <div class="modal-footer imposter-slogan">
+                    <img class="imposter"
+                        src="https://cdn.dribbble.com/users/1003944/screenshots/14561765/among_us_run_dribbble_4x.gif?compress=1&resize=400x300">
+                    <br>
+                    <h2>Getting started is a smooth process when yo have the right help! Welcome to the best source of
+                        help in this galaxy!</h2>
+                </div>
             </div>
         </div>
-    </div>
 
-<!-- MODAL 3 -->
-    <!-- Trigger/Open The Modal -->
-    <!-- The Modal -->
-    <div id="myModal3" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">×</span>
-                <h2>Taking Loans + Credit Scores</h2>
-            </div>
-            <div class="modal-body">
-                <p></p>
-            </div>
-            <div class="modal-footer imposter-slogan">
-                <img class="imposter" src= "https://preview.redd.it/xprpkp063sn51.png?width=440&format=png&auto=webp&s=5d51eb262af4a50e8f935218feb52682540aa525">
-                <br>
-                <h2>NEVER rush into taking out your first loan! These are huge and can make or break your credit score!</h2>
+        <!-- MODAL 2 -->
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal2" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>First Job + Responsibilities</h2>
+                </div>
+                <div class="modal-body">
+                    <h2>Overview: </h2>
+                    <div class="body-over">
+                        <p class="list-over">
+                            You got your first job! While it is a very exciting time, it is important to make the most
+                            of your income and plan for the future.
+                        </p>
+                        <h2>Requirements: </h2>
+                        <div class="body-req">
+                            <p class="list-req">
+                                Set up a checking and savings account to enable money-wiring. Make long-term and
+                                short-term goals associated with a reasonable budget and a savings plan.
+                            </p>
+                        </div>
+                        <h2>Action Steps: </h2>
+                        <div class="body-act">
+                            <p class="list-act">
+                            <p>Should create a flexible budget for retirement savings, monthly budget, and wants.
+                            </p> <br>
+                            <p>A good rule is 50-20-30: 50 percent goes to needs, 20 percent are for savings and debt
+                                payments, 30 percent are for wants.
+                            </p> <br>
+                            <p>Enroll in a 401k plan & if possible, accept a health insurance plan. If you notice
+                                some money allocated from tax, your employer has taken out the taxes you owe. 
+                            </p><br>
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer imposter-slogan">
+                    <img class="imposter"
+                        src="https://i.pinimg.com/originals/7f/53/8a/7f538a8eae483c3ded6a5e1fc89a40b1.png">
+                    <br>
+                    <h2>Getting your first job is always exciting... don't forget to pay your taxes though!</h2>
+                </div>
             </div>
         </div>
-    </div>    
 
-<!-- MODAL 4 -->
-<!-- Trigger/Open The Modal -->
-<!-- The Modal -->
-<div id="myModal4" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">×</span>
-            <h2>Buying a Car</h2>
-        </div>
-        <div class="modal-body">
-            <p>The cost of a new car can be intimidating therefore it is important to have a plan! Firstly, you need to recognize how you plan on paying: finance the car with an auto loan & at the dealership or entirely in cash. A tip to note is that if you are taking out a loan on your car, shorter loan terms come with lower interest rates but higher monthly payments. This is because the longer you take to repay a loan, the more interest you’ll pay. In addition to the short loan term, you can avoid poor financial planning where you owe more money than the car is worth by putting money down, essentially a 20% downpayment. Also, it is important to not finance the miscellaneous expenses involved purchasing a car such as sales tax, registration fees, documentation fees, etc, since you’re increasing the amount of your loan but not the value of the car securing the loan.</p>
-        </div>
-        <div class="modal-footer imposter-slogan">
-                <img class="imposter" src= "https://www.pxpng.com/public/uploads/preview/-11602156022usb870t3qm.png">
-                <br>
-                <h2>Buying a car is cool, but have you tried buying a spaceship??</h2>
-        </div>
-    </div>
-</div>
-
-<!-- MODAL 5 -->
-    <!-- Trigger/Open The Modal -->
-    <!-- The Modal -->
-    <div id="myModal5" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">×</span>
-                <h2>Buying a Home + Other Large Assets</h2>
-            </div>
-            <div class="modal-body">
-                <p>The first thing to do before buying a home is to make sure it’s the right time for you to do so. Typically owning a home pays off financially if you will live in it for at least five years thus it requires commitment. The next thing to do is to check if your credit score is acceptable, thus a good credit score is required in order to get approved for a mortgage (use one's real property as a guarantee for a loan to get money). In addition to making sure your credit score is solid, you’ll also want to focus on the cash you’ll need to make buying your first home a reality. This comes down to your down payment (amount of cash you put toward the sale price of a home) which is typically between 3.5% and 20% of the purchase price. It reduces the amount of money you will have to borrow. It is important for you to acquire a Mortgage pre-approval which is a free and non-binding process that presents you as a qualified buyer when buying your first home. The different types of mortgages are fixed-rates and adjustable rates which are priced differently. Most buyers should lean towards fixed-rate mortgages as the interest rate remains constant through your loan term. Finally, a cost to remember that usually goes unnoticed is a secure homeowners insurance for your properties to avoid serious liabilities. </p>
-            </div>
-            <div class="modal-footer imposter-slogan">
-                <img class="imposter" src= "https://www.citypng.com/public/uploads/preview/-21602820688wvehxu8y8n.png">
-                <br>
-                <h2>Purchasing a house (or similarly large assets) are usually something you want to plan out in advance!</h2>
-            </div>
-        </div>
-    </div>
-
-<!-- MODAL 6 -->
-    <!-- Trigger/Open The Modal -->
-    <!-- The Modal -->
-    <div id="myModal6" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">×</span>
-                <h2>Savings + Rainy Day Funds</h2>
-            </div>
-            <div class="modal-body">
-                <p>People of all incomes have faced the challenges of rebuilding their lives after a disaster or an emergency. During these times it is important to have access to personal financial, insurance, medical and other records to start the recovery process quickly and efficiently. You should consider saving money in an emergency savings account which could be accessed during a crisis. At times keeping a small amount of cash can be useful if you don’t have access to a bank or ATM (common during natural disasters). To prevent greater loss it is imperative to obtain property (homeowners or renters), health and life insurance. Review your policy to make sure the amount and types of coverage you have meets the requirements for any possible hazard. Also, often homeowners insurance does not typically cover flooding, so you may need to purchase flood insurance. Your emergency fund should have enough money to cover your expenses for three to six months. You will need this money in the event of a more serious setback, such as a layoff or an illness that stops you from working.</p>
-
-                <br>
-
-                <form action="/calculator" method="POST">
-                Input the starting principle amount:
-                <input type="text" name="p"><br>
-                Enter the number of compounding periods per year:
-                <input type="text" name="n"><br>
-                Enter your annual interest rate in integer value. Ex: 15 for 15%:
-                <input type="text" name="r"><br>
-                Provide the amount of years:
-                <input type="text" name="y"><br>
-                <button type="submit" value="submit">Calculate</button>
-                </form>
-                
-                <br>
-                
-                {%if z%}
-                <p>Your cost is {{z}}</p>
-                {%endif%}
-
-            </div>
-            <div class="modal-footer imposter-slogan">
-                <img class="imposter" src= "https://i.pinimg.com/originals/9d/fa/30/9dfa304d61a9d46735affb44a1cb2c0d.png">
-                <br>
-                <h2>Gotta be ready for anything! Savings & rainy day funds are really important to prioritize as you begin your financial journey!</h2>
+        <!-- MODAL 3 -->
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal3" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Taking Student Loans</h2>
+                </div>
+                <div class="modal-body">
+                    <h2>Overview: </h2>
+                    <div class="body-over">
+                        <p class="list-over">
+                            Student loans: one option for students & families to help pay for
+                            college... but they're a <b>serious</b> financial commitment.
+                        </p>
+                        <h2>Requirements: </h2>
+                        <div class="body-req">
+                            <p class="list-req">
+                                Private Loan: need a cosigner (parent/guardian with a good credit score) + tax
+                                forms + documentation (social security number).
+                            </p>
+                        </div>
+                        <h2>Action Steps: </h2>
+                        <div class="body-act">
+                            <p class="list-act">
+                            <p>Before committing to a loan with interest: try getting money from scholarships, grants, or
+                                savings and income.
+                            </p> <br>
+                            <p>2 kinds of loans: (1) federal and (2) private. Federal loan? Need the FAFSA form (money loaned
+                                out by the government) - the amount of money is capped. Private loan? Must find a
+                                lender and set your own loan price.
+                            </p> <br>
+                            <p>Imposter Tip: Consider federal loan options in the student’s name for low, fixed interest rates and
+                                special benefits. If private loans for college, then bring cosigner with good credit to
+                                qualify for a loan and secure a lower interest rate.
+                            </p><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer imposter-slogan">
+                    <img class="imposter"
+                        src="https://preview.redd.it/xprpkp063sn51.png?width=440&format=png&auto=webp&s=5d51eb262af4a50e8f935218feb52682540aa525">
+                    <br>
+                    <h2>NEVER rush into taking out your first loan! These are huge and can make or break your credit
+                        score!</h2>
+                </div>
             </div>
         </div>
-    </div>
 
-<!-- MODAL 7 -->
-    <!-- Trigger/Open The Modal -->
-    <!-- The Modal -->
-    <div id="myModal7" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">×</span>
-                <h2>Retirement</h2>
+        <!-- MODAL 4 -->
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal4" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Buying a Car</h2>
+                </div>
+                <div class="modal-body">
+                    <h2>Overview: </h2>
+                    <div class="body-over">
+                        <p class="list-over">
+                            You got your driver's license, and you want to explore! But, the cost of a new car can be
+                            intimidating... it's important to have a plan!
+                        </p>
+                        <h2>Requirements: </h2>
+                        <div class="body-req">
+                            <p class="list-req">
+                                General: a budget + downpayment + documentation (driver license, utility bills & credit card
+                                statements)
+                            </p>
+                        </div>
+                        <h2>Action Steps: </h2>
+                        <div class="body-act">
+                            <p class="list-act">
+                            <p>Paying methods: finance the car with an auto loan at the dealership, or entirely in
+                                cash. Go with shorter loan terms for lower interest rates... but higher monthly payments.
+                            </p> <br>
+                            <p>Shorter-term loans avoid poor financial planning and debt.
+                            </p> <br>
+                            <p>Do <i>not</i> finance miscellaneous expenses (ie. sales tax, registration fees, documentation
+                                fees, etc) since you’re increasing the amount of your loan but not the value of the car
+                                securing the loan.
+                            </p><br>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer imposter-slogan">
+                    <img class="imposter" src="https://www.pxpng.com/public/uploads/preview/-11602156022usb870t3qm.png">
+                    <br>
+                    <h2>Buying a car is cool, but have you tried buying a spaceship??</h2>
+                </div>
             </div>
-            <div class="modal-body">
-                <p>Definition (what is this decision, who would make this decision)</p> 
-                <p>Must-Knows (things you should know before deciding whether to set this as a goal)</p>
-                <p>What it requires (action plans)</p>
+        </div>
 
-                <h1>CALCULATOR</h1>
-                <form method="post" action="/retirement">
+        <!-- MODAL 5 -->
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal5" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Buying a Home + Other Large Assets</h2>
+                </div>
+                <div class="modal-body">
+                    <h2>Overview: </h2>
+                    <div class="body-over">
+                        <p class="list-over">
+                            You want to move into a space of your own, but you're overwhelmed by the intricacies of
+                            being a home-owner.
+                        </p>
+                        <h2>Requirements: </h2>
+                        <div class="body-req">
+                            <p class="list-req">
+                                You'll Need: a reasonable down payment amount + a mortgage approval + documentation + good
+                                credit score + commitment
+                            </p>
+                        </div>
+                        <h2>Action Steps: </h2>
+                        <div class="body-act">
+                            <p class="list-act">
+                            <p>Make sure it’s the right time: typically owning a home pays off financially if you'll
+                                live in it for at least 5 years.
+                            </p> <br>
+                            <p>Need down payment between 3.5% to 20% of the purchase price... so save a decent amount of
+                                cash and have a solid credit score. Save money for homeowners insurance to avoid serious
+                                liabilities.
+                            </p> <br>
+                            <p>Acquire a Mortgage pre-approval to be seen as a qualified buyer. The different types of
+                                mortgages are (1) fixed-rates and (2) adjustable rates. Lean towards fixed-rate mortgages as the
+                                interest rate remains constant through your loan term.
+                            </p><br>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer imposter-slogan">
+                    <img class="imposter"
+                        src="https://www.citypng.com/public/uploads/preview/-21602820688wvehxu8y8n.png">
+                    <br>
+                    <h2>Purchasing a house (or similarly large assets) are usually something you want to plan out in
+                        advance!</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODAL 6 -->
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal6" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Savings + Rainy Day Funds</h2>
+                </div>
+                <div class="modal-body">
+                    <h2>Overview: </h2>
+                    <div class="body-over">
+                        <p class="list-over">
+                            You may face the aftermath and challenges of a disaster or an emergency.
+                        </p>
+                        <h2>Requirements: </h2>
+                        <div class="body-req">
+                            <p class="list-req">
+                                Keep aside 3-6 months of spending in your emergency fund, money at home, a foolproof
+                                liability and insurance policy, and documentation in a safe place.
+                            </p>
+                        </div>
+                        <h2>Action Steps: </h2>
+                        <div class="body-act">
+                            <p class="list-act">
+                            <p>Keep money in an emergency savings account but also cash incase of lack of access to a
+                                bank or ATM (common during natural disasters).
+                            </p> <br>
+                            <p>Obtain property (homeowners or renters), health and life insurance to avoid loss. Check
+                                your policy to verify the amount and types of coverage for your requirements. </p><br>
+                            <p>Imposter Tip: homeowners insurance does not typically cover flooding, so you may need to purchase
+                                flood insurance.
+                            </p> <br>
+                            <p>Emergency fund: money to cover expenses for 3 to 6 months (during layoff or illness).
+                            </p><br>
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <h3>Interest-Based Savings Calculator</h3>
+                    <form action="/calculator" method="POST">
+                        Input the starting principle amount:
+                        <input type="text" name="p">
+                        <br><br>
+
+                        Enter the number of compounding periods per year:
+                        <input type="text" name="n"><br><br>
+                        Enter your annual interest rate in integer value. Ex: 15 for 15%:
+                        <input type="text" name="r"><br><br>
+                        Provide the amount of years:
+                        <input type="text" name="y"><br><br>
+                        <button type="submit" class="yellowing" value="submit">Calculate</button>
+                    </form>
+
                     <br>
 
-                    <label for="pmt">Enter a number representing the investment amount at the end of every year: </label>
-                    <input type="text" class="form-text-box" name="pmt" value="">
+                    {%if z%}
+                    <p>Your cost is {{z}}</p>
+                    {%endif%}
 
-                    <br><br>
-
-                    <label for="i">Enter the rate of interest in integer value. (Ex: 15 is 15%): </label>
-                    <input type="text" class="form-text-box" name="i" value="">
-
-                    <br><br>
-
-                    <label for="fv">Enter the least amount to be able to afford retirement:  </label>
-                    <input type="text" class="form-text-box" name="fv" value="">
-
-                    <br><br>
-
-                    <label for="beg_age">Enter your current age: </label>
-                    <input type="text" class="form-text-box" name="beg_age" value="">
-
-                    <br><br>
-
-                    <input type="submit" value="Submit" />
-                </form>                
-
-                {%if retir_age%}
-                <p>You can retire at: {{retir_age}} years old</p>
-                {%endif%}
-
-
-            </div>
-            <div class="modal-footer imposter-slogan">
-                <img class="imposter" src= "data:image/png;base64,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">
-                <br>
-                <h2>Retirement is something to keep in mind as you begin your career! Don't overlook this huge part of your life!</h2>
+                </div>
+                <div class="modal-footer imposter-slogan">
+                    <img class="imposter"
+                        src="https://i.pinimg.com/originals/9d/fa/30/9dfa304d61a9d46735affb44a1cb2c0d.png">
+                    <br>
+                    <h2>If you want to see your results, click back onto step #6!</h2>
+                </div>
             </div>
         </div>
-    </div>
 
-<!-- MODAL 8 -->
-<!-- Trigger/Open The Modal -->
-<!-- The Modal -->
-<div id="myModal8" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">×</span>
-            <h2>Finance Game</h2>
-        </div>
-        <div class="modal-body">
-            <p>Insert Body Text Here</p>
-        </div>
-        <div class="modal-footer imposter-slogan">
-                <img class="imposter" src= "https://www.citypng.com/public/uploads/small/41604200945xqhmnoensdfhyov8wlxnbpr4wujxyuucxhk1ytbvwg0lo18aurs6rqjrzfrxsoqcqzq7d7ri1yx2js0uyhkmiuwqmc1mqni8tfao.png">
-                <br>
-                <h2>Test yourself with this finance game!</h2>
-        </div>
-    </div>
-</div>
+        <!-- MODAL 7 -->
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal7" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Retirement</h2>
+                </div>
+                <div class="modal-body">
+                    <h1>Retirement Calculator</h1>
+                    <form method="post" action="/retirement">
+                        <br>
 
-<!-- MODAL 9 -->
-    <!-- Trigger/Open The Modal -->
-    <!-- The Modal -->
-    <div id="myModal9" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">×</span>
-                <h2>Finance Game 2</h2>
-            </div>
-            <div class="modal-body">
-                <p>Insert Body Text Here</p>
-            </div>
-            <div class="modal-footer imposter-slogan">
-                <img class="imposter" src= "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/edb2d0a0-bb4d-4aa9-9bf0-faad934503f7/de8u6k0-6ec02934-391e-41c1-89c6-327a1e13595c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VkYjJkMGEwLWJiNGQtNGFhOS05YmYwLWZhYWQ5MzQ1MDNmN1wvZGU4dTZrMC02ZWMwMjkzNC0zOTFlLTQxYzEtODljNi0zMjdhMWUxMzU5NWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7ND_e4tSCPGi7telHElXN1Gcdvj6Gzb1xn2YPDabuNc">
-                <br>
-                <h2>Finance-themed games are a fun way to test yourself while having fun :) </h2>
+                        <label for="pmt">Enter a number representing the investment amount at the end of every year:
+                        </label>
+                        <input type="text" class="form-text-box" name="pmt" value="">
+
+                        <br><br>
+
+                        <label for="i">Enter the rate of interest in integer value. (Ex: 15 is 15%): </label>
+                        <input type="text" class="form-text-box" name="i" value="">
+
+                        <br><br>
+
+                        <label for="fv">Enter the least amount to be able to afford retirement: </label>
+                        <input type="text" class="form-text-box" name="fv" value="">
+
+                        <br><br>
+
+                        <label for="beg_age">Enter your current age: </label>
+                        <input type="text" class="form-text-box" name="beg_age" value="">
+
+                        <br><br>
+
+                        <input type="submit" class="yellowing" value="Submit" />
+                    </form>
+
+                    {%if retir_age%}
+                    <p>You can retire at: {{retir_age}} years old</p>
+                    {%endif%}
+
+
+                </div>
+                <div class="modal-footer imposter-slogan">
+                    <img class="imposter"
+                        src="data:image/png;base64,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">
+                    <br>
+                    <h2>If you want to see your results, click back into step #7!</h2>
+                </div>
             </div>
         </div>
+
+        <!-- MODAL 8 -->
+        <!-- Trigger/Open The Modal -->
+        <!-- The Modal -->
+        <div id="myModal8" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">×</span>
+                    <h2>Explore More</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Now that you've embarked on the space race to financial security & have gone through major events throughout a crewmate's financial future, click the information page to do
+                        additional research and click goals to begin planning your mission!</p>
+                </div>
+                <div class="modal-footer imposter-slogan">
+                    <img class="imposter"
+                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/edb2d0a0-bb4d-4aa9-9bf0-faad934503f7/de8u6k0-6ec02934-391e-41c1-89c6-327a1e13595c.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2VkYjJkMGEwLWJiNGQtNGFhOS05YmYwLWZhYWQ5MzQ1MDNmN1wvZGU4dTZrMC02ZWMwMjkzNC0zOTFlLTQxYzEtODljNi0zMjdhMWUxMzU5NWMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7ND_e4tSCPGi7telHElXN1Gcdvj6Gzb1xn2YPDabuNc">
+                    <br>
+                    <h2>Good luck! </h2>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
     <script>

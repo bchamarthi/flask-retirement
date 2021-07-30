@@ -8,7 +8,15 @@ font-size: 25px;
 padding: 5px;
 padding-top: 10px;
 padding-left: 20px;
-color: white;
+color: rgb(0, 0, 0);
+}
+
+html, body { 
+    background-color:#2d779c;
+    color: rgb(255, 255, 255);
+    padding-left: 5%;
+    padding-right: 5%;
+
 }
 
 ul {
@@ -16,8 +24,11 @@ list-style-type: none;
 margin: 0;
 padding: 0;
 overflow: hidden;
-background-color: #2d779c;
+background-color: white;
 border-radius: 15px;
+border-style: groove; 
+border-color:black;
+border-width: 5px;
 }
 
 li {
@@ -25,13 +36,22 @@ float: left;
 }
 
 li a {
-display: block;
-color: rgb(255, 255, 255);
-font-family: 'Space Mono', monospace; 
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-border-radius: 15px;
+    display: block;
+    color: rgb(0, 0, 0);
+    font-family: 'Space Mono', monospace; 
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+}
+
+.text {
+    padding: 14px 16px;
+}
+
+#pfp { 
+    padding: 4px 4px;
+    height: 50px; 
+    width: 50px;
 }
 
 li a:hover:not(.active) {
@@ -53,10 +73,7 @@ color: rgb(255, 255, 255);
 * {
     box-sizing: border-box;
 }
-html,
-body {
-    height: 100%;
-}
+
 
 .page-content {
     place-items: center;
@@ -84,6 +101,10 @@ body {
     overflow: hidden;
     padding: 1rem;
     width: 100%;
+    border-style: groove;
+    border-radius: 15px;
+    border-color: black;
+    border-width: 4px;
     text-align: center;
     color: whitesmoke;
     background-color: whitesmoke;
@@ -120,16 +141,16 @@ body {
     transition: transform calc(var(--d) * 2) var(--e);
 }
 .card:nth-child(1):before {
-    background-image: url(https://media.nationalgeographic.org/assets/photos/185/610/8ba3500a-d879-4bf9-a84c-350baacfc4cd.jpg);
+    background-image: url(https://i.ibb.co/4P8Xntx/ufogif.jpg);
 }
 .card:nth-child(2):before {
-    background-image: url(https://m.media-amazon.com/images/I/518LjNaooLL._AC_SY741_.jpg);
+    background-image: url(https://media4.giphy.com/media/h7tdUG15Dzzmqzv632/giphy.gif);
 }
 .card:nth-child(3):before {
-    background-image: url(https://www.thisiscolossal.com/wp-content/uploads/2020/08/cupola-with-clouds-and-ocean.jpg);
+    background-image: url(https://i.ibb.co/sCzm0xy/rocket11.jpg);
 }
 .card:nth-child(4):before {
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/c/cc/STS-125_FD9_Release.jpg);
+    background-image: url(https://media4.giphy.com/media/0tyOasM1BTUtdyf4nt/200w.gif?cid=82a1493b48eahk04mx7p19u7e2xftn7w1n76z9c9846oj7kx&rid=200w.gif&ct=g);
 }
 .content {
     position: relative;
@@ -148,6 +169,7 @@ body {
     font-size: 1.3rem;
     font-weight: bold;
     line-height: 1.2;
+    font-family: 'Orbitron', sans-serif;
 }
 .copy {
     font-family: 'Space Mono', monospace;
@@ -270,35 +292,60 @@ body {
 }
 .modal-header {
     padding: 2px 16px;
-    background-color: #5a6b34;
-    color: white;
+    background-color: rgb(255, 255, 84);
+    color: rgb(0, 0, 0);
     border-radius: 14px;
-    font-family: 'Cinzel Decorative', cursive;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 15px;
+    border-style: groove;
+    border-color: black;
+    border-width: 4px;
 }
 .modal-body {
     padding: 2px 16px;
     border-radius: 15px;
-    background-color: #000000;
-    font-family: 'EB Garamond', serif;
+    background-color: #a7c7ac;
+    font-family: 'Do Hyeon', sans-serif;
+    border-radius: 15px;
+    border-style: groove;
+    border-color: rgb(0, 0, 0);
+    border-width: 4px;
+    color: black;
 }
 .modal-footer {
     padding: 2px 16px;
-    background-color: #64635d;
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     border-radius: 15px;
-    font-family: 'Encode Sans SC', sans-serif;
+    font-family: 'Space Mono', monospace;
+    border-radius: 15px;
+    border-style: groove;
+    border-color: black;
+    border-width: 4px;
 }
 .modal-button {
     cursor: pointer;
     margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 0.5rem;
     font-size: 0.65rem;
     font-weight: bold;
     letter-spacing: 0.025rem;
     text-transform: uppercase;
-    color: white;
-    background-color: #925818;
-    border: none;
+    border-radius: 5px; 
+    background-color: rgb(255, 255, 84);
+    font-family: 'Orbitron', sans-serif;
+}
+.yellowing {
+    cursor: pointer;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 0.65rem;
+    font-weight: bold;
+    letter-spacing: 0.025rem;
+    text-transform: uppercase;
+    border-radius: 5px; 
+    background-color: rgb(255, 255, 84);
+    font-family: 'Orbitron', sans-serif;
 }
 .modal-button:hover {
     background-color: #6d6a63;
@@ -312,6 +359,7 @@ body {
     width: 700px;
     height: 50px;
     overflow:scroll;
+    font-family: 'Space Mono', monospace;
 }
 #current {
     background-color: #57554c;
@@ -324,7 +372,7 @@ body {
 .scrollabletextbox {
     height:100%;
     width:100%;
-    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-family: 'Space Mono', monospace;
     font-size: 82%;
     overflow:scroll;
 }
