@@ -34,7 +34,8 @@ def about():
 
 @app.route('/profile.html')
 def profile():
-    return render_template('profile.html')
+    user = session['username']
+    return render_template('profile.html', user = user)
 
 @app.route('/game')
 def game():
@@ -65,7 +66,13 @@ def smarty():
     query = {'name': session['username']}
     if request.method == 'POST':
         new_goal = request.form['new_goal']
-        current_goal.append(new_goal)
+        new_measure = request.form['new_measure']
+        new_achieveable = request.form['new_achieveable']
+        new_realistic = request.form['new_realistic']
+        new_time = request.form['new_time']
+        new_additional = request.form['new_additional']
+        finalMessage = ("I want to " + new_goal + ". I will be measuring this goal by: " + new_measure + ". This goal is " + new_achieveable + " achieveable and is " + new_realistic + " realistic. I aim to complete this goal by: " + new_time + ". Additional Info: " + new_additional)
+        current_goal.append(finalMessage)
         newvalues = { "$set": { "current-goals": current_goal  } }
         collection.update_one(query, newvalues)
         return render_template('smart.html', current=current_goal)
@@ -81,11 +88,17 @@ def complete():
     if request.method == 'GET': 
         return render_template('smart.html', complete=complete_goal)
     if request.method == 'POST':
+        new_goal = request.form['new_goal']
+        new_measure = request.form['new_measure']
+        new_achieveable = request.form['new_achieveable']
+        new_realistic = request.form['new_realistic']
+        new_time = request.form['new_time']
+        new_additional = request.form['new_additional']
         checked_goals = list(request.form) 
         for checked in checked_goals: 
             for goal in current_goal: 
                 if goal == checked: 
-                    complete_goal.append(goal)
+                    complete_goal.append("I want to " + new_goal + ". I will be measuring this goal by: " + new_measure + ". This goal is " + new_achieveable + " achieveable and is " + new_realistic + " realistic. I aim to complete this goal by: " + new_time + ". Additional Info: " + new_additional)
                     newComplete = { "$set": { "completed-goals": complete_goal } }
                     collection.update_one(query, newComplete)
                     current_goal.remove(goal)

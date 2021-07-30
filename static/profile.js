@@ -1,60 +1,32 @@
-[...document.getElementsByTagName("button")].forEach(function (item) {
-  // adding eventListener to the elements
-  item.addEventListener("click", function () {
-    // calling the methods
-    // this.id will be the id of the clicked button
-    // there is a method in the object by same name, which will be trigger
-    obj[this.id]();
-  });
-});
+document.getElementById('falu').onclick = partyFalu
+document.getElementById('smaragdine').onclick = partySmaragdine
+document.getElementById('glaucous').onclick = partyGlaucous
+document.getElementById('sarcoline').onclick = partySarcoline
 
-var obj = {
-  1: function () {
-    document.documentElement.style.setProperty("--player", "#ea1616");
-    document.documentElement.style.setProperty("--player-shadow", "#840931");
-  },
-  2: function () {
-    document.documentElement.style.setProperty("--player", "#132fd2");
-    document.documentElement.style.setProperty("--player-shadow", "#09158e");
-  },
-  3: function () {
-    document.documentElement.style.setProperty("--player", "#107f2c");
-    document.documentElement.style.setProperty("--player-shadow", "#0a4d2d");
-  },
-  4: function () {
-    document.documentElement.style.setProperty("--player", "#ed53b9");
-    document.documentElement.style.setProperty("--player-shadow", "#ac2cad");
-  },
-  5: function () {
-    document.documentElement.style.setProperty("--player", "#ef7d0e");
-    document.documentElement.style.setProperty("--player-shadow", "#b53f15");
-  },
-  6: function () {
-    document.documentElement.style.setProperty("--player", "#f5f558");
-    document.documentElement.style.setProperty("--player-shadow", "#c28722");
-  },
-  7: function () {
-    document.documentElement.style.setProperty("--player", "#3f484e");
-    document.documentElement.style.setProperty("--player-shadow", "#1e1f25");
-  },
-  8: function () {
-    document.documentElement.style.setProperty("--player", "#d5e0ef");
-    document.documentElement.style.setProperty("--player-shadow", "#8295bc");
-  },
-  9: function () {
-    document.documentElement.style.setProperty("--player", "#6b30bc");
-    document.documentElement.style.setProperty("--player-shadow", "#3c177c");
-  },
-  10: function () {
-    document.documentElement.style.setProperty("--player", "#72491e");
-    document.documentElement.style.setProperty("--player-shadow", "#5e2613");
-  },
-  11: function () {
-    document.documentElement.style.setProperty("--player", "#39fedb");
-    document.documentElement.style.setProperty("--player-shadow", "#24a9be");
-  },
-  12: function () {
-    document.documentElement.style.setProperty("--player", "#50ef3a");
-    document.documentElement.style.setProperty("--player-shadow", "#16a941");
-  }
-};
+function partyFalu() {
+  document.querySelector('.st2').style.fill = 'rgb(126,37,30)'
+  document.querySelector('.st3').style.fill = 'rgb(63,19,15)'
+  document.querySelector('.st7').style.fill = 'rgb(126,37,30)'
+  document.querySelector('.st4').style.fill = 'rgb(63,19,15)'
+}
+
+function partySmaragdine() {
+  document.querySelector('.st2').style.fill = 'rgb(25,145,113)'
+  document.querySelector('.st3').style.fill = 'rgb(13,73,67)'
+  document.querySelector('.st7').style.fill = 'rgb(25,145,113)'
+  document.querySelector('.st4').style.fill = 'rgb(13,73,67)'
+}
+
+function partyGlaucous() {
+  document.querySelector('.st2').style.fill = 'rgb(96,126,175)'
+  document.querySelector('.st3').style.fill = 'rgb(48,63,88)'
+  document.querySelector('.st7').style.fill = 'rgb(96,126,175)'
+  document.querySelector('.st4').style.fill = 'rgb(48,63,88)'
+}
+
+function partySarcoline() {
+  document.querySelector('.st2').style.fill = 'rgb(250,218,170)'
+  document.querySelector('.st3').style.fill = 'rgb(125,109,85)'
+  document.querySelector('.st7').style.fill = 'rgb(250,218,170)'
+  document.querySelector('.st4').style.fill = 'rgb(125,109,85)'
+}

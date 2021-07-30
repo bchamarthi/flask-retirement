@@ -1,20 +1,76 @@
 <html>
-    <head>
-        <title>Community Events Board</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbitron:wght@600&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <h2>Log in</h2>
-        <div>
-            <form action="/log" method="POST">
-                <label for="name">Name</label>
-                <input type="text" name="username">
-                <label for="password">Password</label>
-                <input type="password" name="password">
-                <input type="submit" value="Log In">
-            </form>
-            <p>No account? <a href="/signup">Sign up.</a></p>
+
+<head>
+    <title>Log In</title>
+    <link rel="stylesheet" href="../static/css/log.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbitron:wght@600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=EB+Garamond&family=Encode+Sans+SC:wght@200&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Orbitron:wght@600&display=swap"
+        rel="stylesheet">
+    <script src="../static/log.js"></script>
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <ul>
+            <li id="title"><i>F I N E X P L O R E</i></a></li>
+            <li class="text" style="float:right"><a href="/index.html">← Go Back</a></li>
+        </ul>
+    </div>
+
+    <br><br>
+
+    <div class="everything-body">
+        <h1>Log in</h1>
+        <div class="everything-form">
+            <div class="form-log">
+                <div>
+                    <h2>
+                        <form action="/log" method="POST">
+                            <label for="name">Username: </label>
+                            <input type="text" name="username">
+                            <br>
+                            <br>
+                            <label for="password">Password: </label>
+                            <input type="password" name="password">
+                    </h2>
+                </div>
+            </div>
+
+            <div class="swipy-card">
+                <div id="wrapper">
+                    <div id="reader" data-status="">
+                        <div class="top">
+                            <div class="screen">
+                                <div id="message"></div>
+                            </div>
+                            <div class="lights">
+                                <div class="light red"></div>
+                                <div class="light green"></div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <input class="button-submit" type="submit" value="Log In">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img class="images" src="https://www.citypng.com/public/uploads/preview/-51610397785ihfzc6l6tb.png">
+                <br>
+                <p class="psa">No account? No worries. <a href="/signlog">Sign up</a></p>
+            </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

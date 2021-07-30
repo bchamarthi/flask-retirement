@@ -8,7 +8,7 @@
     padding: 5px;
     padding-top: 10px;
     padding-left: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 ul {
@@ -16,7 +16,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #9eb7bb;
+    background-color: #ffffff;
     border-radius: 15px;
     border-style: groove;
     border-color: black;
@@ -30,21 +30,30 @@ li {
 
 li a {
     display: block;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: 'Space Mono', monospace; 
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     border-radius: 15px;
 }
 
+.text {
+    padding: 14px 16px;
+}
+
+#pfp { 
+    padding: 4px 4px;
+    height: 50px; 
+    width: 50px;
+}
+
 li a:hover:not(.active) {
-    background-color: #54d3c3;
+    background-color: #b1b1b1;
     border-radius: 15px;
 }
 
 .active {
-    background-color: #bababa;
+    background-color: #5e5e5e;
     color: rgb(255, 255, 255);
 }
 
@@ -58,7 +67,8 @@ li a:hover:not(.active) {
 
 body {
   background-color: var(--background);
-  font-family: Arial;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .container {
@@ -118,202 +128,110 @@ section {
   border-radius: 10px;
 }
 
-/* Button Grid */
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 2% 2%;
-  cursor: pointer;
-  margin: 5% 15% 20% 15%;
-  height: 75%;
+*{
+  box-sizing: border-box;
 }
 
-.grid-container > button {
-  border: 10px solid black;
-  text-align: center;
-  font-size: 30px;
-  border-radius: 15px;
-  cursor: pointer;
-  outline: none;
+
+img{
+  display: block;
+  height: 300px;
+  margin: 0 auto;
+}
+.colors{
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  margin-top: 60px;
+
 }
 
-.red {
-  background-color: #c71111;
+svg{
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  margin-top: 50px;
 }
-
-.blue {
-  background-color: #142ed2;
-}
-
-.green {
-  background-color: #12812e;
-}
-
-.pink {
-  background-color: #ee54bc;
-}
-
-.orange {
-  background-color: #ef7d10;
-}
-
-.yellow {
-  background-color: #f9f75a;
-}
-
-.black {
-  background-color: #3f484e;
-}
-
-.white {
-  background-color: #d7e2f3;
-}
-
-.purple {
-  background-color: #6b30bc;
-}
-
-.brown {
-  background-color: #704a1e;
-}
-.cyan {
-  background-color: #44fcd7;
-}
-.lime {
-  background-color: #4ff03a;
-}
-/* Player */
-
-.player {
-  background-color: var(--player-shadow);
-  height: 200px;
-  width: 140px;
-  position: absolute;
-  margin: auto;
-  left: 0;
-  right: 50vw;
-  top: 0;
-  bottom: 0;
-  border: 10px solid #000000;
-  border-bottom: none;
-  border-radius: 60px 80px 0 0;
-  z-index: 1;
-}
-.player:after {
-  content: "";
-  position: absolute;
-  width: 92%;
-  height: 85%;
-  background-color: var(--player);
-  top: 2.5px;
-  left: 6px;
-  border-radius: 58% 70% 28% 42% / 28% 56% 88% 89%;
-}
-.legs {
+.colora {
+  width: 50px;
   height: 50px;
-  width: 60px;
-  background-color: var(--player-shadow);
-  position: absolute;
-  bottom: -50px;
-  left: -10px;
-  border: 10px solid #000000;
-  border-top: none;
-  border-radius: 0 0 22px 22px;
-  z-index: 1;
-}
-.legs:before {
-  content: "";
-  height: 45px;
-  width: 60px;
-  background-color: var(--player-shadow);
-  position: absolute;
-  right: -90px;
-  border: 10px solid #000000;
-  border-top: none;
-  border-radius: 0 0 22px 22px;
-}
-.legs:after {
-  content: "";
-  height: 10px;
-  width: 55px;
-  background-color: #000000;
-  position: absolute;
-  top: -10px;
-  left: 40px;
-  border-radius: 0 0 10px 0;
-}
-.back {
-  height: 120px;
-  width: 35px;
-  background-color: var(--player);
-  border: 10px solid black;
-  position: absolute;
-  left: -55px;
-  top: 65px;
-  border-right: none;
-  border-radius: 20px 0 0 20px;
-}
-.back:before {
-  content: "";
-  position: absolute;
-  height: 90px;
-  width: 36px;
-  background-color: var(--player-shadow);
-  bottom: 0;
-  left: -1px;
-  border-radius: 17px 0 0 8px;
-}
-.glass {
-  height: 75px;
-  width: 110px;
-  background-color: #225381;
-  z-index: 2;
-  position: absolute;
-  top: 30px;
-  left: 40px;
-  border-radius: 25px 50px 30px 30px;
-  border: 10px solid black;
-}
-.glass:before {
-  content: "";
-  position: absolute;
-  width: 85%;
-  height: 65%;
-  background-color: #71d4ec;
-  border-radius: 0 28px 3px 30px;
-  right: 0;
-  top: 0;
-}
-.glass:after {
-  content: "";
-  position: absolute;
-  width: 45%;
-  height: 22%;
-  background-color: #f7f7f7;
-  left: 39px;
-  top: 5px;
-  border-radius: 10px;
-  transform: rotate(6deg);
-}
-.shadow {
-  height: 40px;
-  width: 210px;
-  background-color: #363a3b;
-  position: absolute;
-  bottom: -60px;
-  right: -40px;
   border-radius: 50%;
-  z-index: 0;
+}
+.avatar{ 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.welcome { 
+    display: flex; 
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 3%;
+    border-radius: 5px;
+    border-color: black;
+    width: 30%;
+    border-style: groove;
+    padding: 10px;
+    background-color: white;
+    border-width: 4px;
+    height:80%; 
+
 }
 
-@media screen and (max-width: 500px) {
-  nav a {
-    float: none;
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
+.everything {
+  display: flex; 
+  flex-direction: row;
+  align-content: center;
 }
 
+.user-id { 
+    font-family: 'Space Mono', monospace; 
+    border-radius: 5px;
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 3%;
+    border-radius: 5px;
+    border-color: black;
+    width: 30%;
+    border-style: groove;
+    padding: 10px;
+    background-color: white;
+    border-width: 4px;
+    height:100%; 
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+#falu{
+  background: rgb(126,37,30);
+}
+#smaragdine{
+  background: rgb(25,145,113);
+}
+#glaucous{
+  background: rgb(96,126,175);
+}
+#sarcoline{
+  background: rgb(250,218,170);
+}
+
+h1 { 
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+h2{
+    font-family: 'Do Hyeon', sans-serif;
+}
+h3{
+    font-family: 'Space Mono', monospace; 
+}
+p{
+    font-family: 'Space Mono', monospace; 
+}

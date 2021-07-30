@@ -3,15 +3,14 @@ var scene = document.getElementById("scene");
 var parallaxInstance = new Parallax(scene);
 
 var keys = [
+    "Disclaimer",
     "Bank",
     "Job",
     "College",
     "Car",
     "House",
-    "Goals",
-    "Family",
     "Tragedy",
-    "Savings"
+
 ];
 var slider = new Swiper(".swiper-container", {
     // Optional parameters
